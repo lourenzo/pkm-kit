@@ -1,0 +1,54 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "import { Plotly } from \"node-kernel\";\r\nimport Big from \"big.js\";\r\n\r\nformattedData = [{\r\n    values: [1,2,3],\r\n    labels: ['x1', 'x2', 'x3'],\r\n    type: 'pie'\r\n}];\r\n\r\ndata=require('./cdb-data-001.json').map(i=> Object.fromEntries(\r\n    Object.entries(i).map(([key, value]) => [key, (!value.match(/\\//))? parseFloat(value) : value]))\r\n)\r\n\r\nPlotly.newPlot(\"myDiv\", formattedData, {height: 400, width: 500})\r\n\r\n\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.ts.notebook.plotly+json",
+                            "value": {
+                                "requestId": "x0ae39fd5d9654338a6628964dbf31d86",
+                                "type": "generatePlot",
+                                "ele": "myDiv",
+                                "data": [
+                                    {
+                                        "values": [
+                                            1,
+                                            2,
+                                            3
+                                        ],
+                                        "labels": [
+                                            "x1",
+                                            "x2",
+                                            "x3"
+                                        ],
+                                        "type": "pie"
+                                    }
+                                ],
+                                "layout": {
+                                    "height": 400,
+                                    "width": 500
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
