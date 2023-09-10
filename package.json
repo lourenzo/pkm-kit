@@ -1,0 +1,31 @@
+{
+  "name": "cdb-app",
+  "version": "1.0.0",
+  "description": "CDB App",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lourenzo/pkm-kit.git"
+  },
+  "keywords": [
+    "financial",
+    "data"
+  ],
+  "author": "Lourenzo Ferreira <lourenzo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lourenzo/pkm-kit/issues"
+  },
+  "homepage": "https://github.com/lourenzo/pkm-kit#readme",
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "big.js": "^6.2.1"
+  }
+}
