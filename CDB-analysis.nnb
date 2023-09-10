@@ -3,7 +3,7 @@
         {
             "language": "typescript",
             "source": [
-                "import { Plotly } from \"node-kernel\";\r\nimport Big from \"big.js\";\r\n\r\nformattedData = [{\r\n    values: [1,2,3],\r\n    labels: ['x1', 'x2', 'x3'],\r\n    type: 'pie'\r\n}];\r\n\r\ndata=require('./cdb-data-001.json').map(i=> Object.fromEntries(\r\n    Object.entries(i).map(([key, value]) => [key, (!value.match(/\\//))? parseFloat(value) : value]))\r\n)\r\n\r\nPlotly.newPlot(\"myDiv\", formattedData, {height: 400, width: 500})\r\n\r\n\r\n"
+                "import { Plotly } from \"node-kernel\";\r\nimport { Data } from \"node-kernel/plotly.js\";\r\n\r\nimport Big from \"big.js\";\r\n\r\nconst formattedData: Data[] = [\r\n  {\r\n    values: [1, 2, 3],\r\n    labels: [\"x1\", \"x2\", \"x3\"],\r\n    type: \"pie\",\r\n  },\r\n];\r\n\r\nconst data = require(\"./cdb-data-001.json\").map((i) =>\r\n  Object.fromEntries(\r\n    Object.entries(i).map(([key, value]: [string, any]) => [\r\n      key,\r\n      !value.match(/\\//) ? parseFloat(value) : value,\r\n    ])\r\n  )\r\n);\r\n\r\nPlotly.newPlot(\"myDiv\", formattedData, { height: 400, width: 500 });\r\n"
             ],
             "outputs": [
                 {
@@ -11,7 +11,7 @@
                         {
                             "mime": "application/vnd.ts.notebook.plotly+json",
                             "value": {
-                                "requestId": "x0ae39fd5d9654338a6628964dbf31d86",
+                                "requestId": "x0dd5f75e906b4c12945e050816019f1c",
                                 "type": "generatePlot",
                                 "ele": "myDiv",
                                 "data": [
