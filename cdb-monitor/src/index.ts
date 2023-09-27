@@ -1,9 +1,9 @@
 type CDBDataItem = {
-	totalWithIncome: number;
+  totalWithIncome: number;
 };
 
 const sampleDataSeries: CDBDataItem[] = [
-	{
-		totalWithIncome: 48348.57,
-	},
+  {
+    totalWithIncome: 48348.57,
+  },
 ];
