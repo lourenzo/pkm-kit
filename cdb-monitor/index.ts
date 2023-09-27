@@ -1,14 +1,13 @@
-import { Data } from "node-kernel/plotly.js";
+import { Data } from 'node-kernel/plotly.js';
 
 type CDBDataItem = {
-    totalWithIncome: number,
+	totalWithIncome: number;
+};
 
-}
+const a: Data[];
 
-const a: Data [];
-
-const sampleDataSeries : CDBDataItem[] = [
-    {
-        totalWithIncome: 48348.57
-    }
+const sampleDataSeries: CDBDataItem[] = [
+	{
+		totalWithIncome: 48348.57,
+	},
 ];
